@@ -1,6 +1,6 @@
 header {
   grid-area: header;
-  background-color: #020218;
+  background-color: rgba(35, 10, 75, 0.712);
   color: aliceblue;
   display: flex;
   justify-content: center;
