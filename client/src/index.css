@@ -19,12 +19,3 @@ main {
   grid-area: main;
   background-color: beige;
 }
-footer {
-  grid-area: footer;
-  background-color: rgb(2, 2, 24);
-  color: aliceblue;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 20px;
-}
