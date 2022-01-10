@@ -1,8 +1,9 @@
 import React from 'react';
+import { constants } from '../../constants';
 import '../../css/Header/Header.css';
 
 function Header() {
-  return <header>shopping cart !!!!!</header>;
+  return <header>{constants.headerTitle}</header>;
 }
 
 export default Header;
