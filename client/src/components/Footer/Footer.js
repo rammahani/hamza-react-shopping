@@ -1,8 +1,9 @@
 import React from 'react';
 import '../../css/Footer/Footer.css';
+import { constants } from '../../constants';
 
 function Footer() {
-  return <footer>@ All Rights For Me.</footer>;
+  return <footer>{constants.footerTitle}</footer>;
 }
 
 export default Footer;
