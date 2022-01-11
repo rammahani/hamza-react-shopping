@@ -2,7 +2,7 @@
   {
     "id": "id1",
     "title": "computer",
-    "imageUrl": "/images/product1.jpeg",
+    "imageUrl": "/images/product1.jpg",
     "desc": "this is product1",
     "price": 30,
     "sizes": ["S", "M", "L", "XL"]
@@ -11,7 +11,7 @@
   {
     "id": "id2",
     "title": "laptop",
-    "imageUrl": "/images/product2.jpeg",
+    "imageUrl": "/images/product2.png",
     "desc": "this is product2",
     "price": 40,
     "sizes": ["S", "M", "L", "XL"]
@@ -19,7 +19,7 @@
   {
     "id": "id3",
     "title": "Tablet",
-    "imageUrl": "/images/product3.jpg",
+    "imageUrl": "/images/product3.png",
     "desc": "this is product3",
     "price": 50,
     "sizes": ["S", "M", "L", "XL"]
