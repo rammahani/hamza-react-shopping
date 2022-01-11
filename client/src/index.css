@@ -15,9 +15,9 @@
   grid-template-rows: 50px 1fr 50px;
 }
 
-main {
+.main {
   grid-area: main;
-  background-color: beige;
+  background-color: rgb(231, 231, 223);
 }
 .wrapper {
   padding: 30px;
@@ -31,8 +31,7 @@ main {
 }
 
 .wrapper .filterwrapper {
-  width: 33%;
-  padding: 2%;
   padding: 2px;
+  width: 33%;
   border: 1px solid indianred;
 }
