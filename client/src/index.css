@@ -19,3 +19,20 @@ main {
   grid-area: main;
   background-color: beige;
 }
+.wrapper {
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper .productswrapper {
+  padding: 2%;
+  width: 65%;
+}
+
+.wrapper .filterwrapper {
+  width: 33%;
+  padding: 2%;
+  padding: 2px;
+  border: 1px solid indianred;
+}
