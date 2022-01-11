@@ -24,5 +24,24 @@
   background: blue;
   color: azure;
   padding: 7px;
+  margin-top: 8px;
   border-radius: 6px;
+}
+
+.product-info img {
+  display: block;
+  height: 60%;
+  width: 40%;
+  margin: auto;
+}
+.product-info p {
+  color: blue;
+  font-size: 20px;
+  margin: 10 0;
+  text-align: center;
+}
+
+.details-maodal {
+  width: 20%;
+  height: 40%;
 }
