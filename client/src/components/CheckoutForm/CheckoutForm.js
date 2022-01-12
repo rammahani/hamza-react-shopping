@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../../css/CheckoutForm/CheckoutForm.css';
+import Input from '../Input/Input';
 function CheckoutForm(props) {
   const [showForm, setShowForm] = useState(false);
   return (
@@ -9,31 +10,20 @@ function CheckoutForm(props) {
           <span className='close-icon' onClick={() => props.setShowForm(false)}>
             &times;
           </span>
-          <form action=''>
-            <div>
-              <label>
-                {' '}
-                Name
-                <input
-                  type='text'
-                  required
-                  name='name'
-                  onChange={props.handleChange}
-                ></input>
-              </label>
-            </div>
-            <div>
-              <label>
-                {' '}
-                Email
-                <input
-                  type='email'
-                  required
-                  name='email'
-                  onChange={props.handleChange}
-                ></input>
-              </label>
-            </div>
+          <form onSubmit={props.submitOrder}>
+            <Input
+              label='name'
+              type='text'
+              name='name'
+              onChange={props.handleChange}
+            />
+            <Input
+              label='email'
+              type='text'
+              name='email'
+              onChange={props.handleChange}
+            />
+
             <div>
               <button type='submit'> checkout</button>
             </div>
