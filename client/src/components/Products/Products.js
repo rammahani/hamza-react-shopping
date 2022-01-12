@@ -15,7 +15,7 @@ function Products(props) {
       {props.products.map((product) => (
         <div className='product-item' key={product.id}>
           <a href='#' onClick={() => openModal(product)}>
-            <img src={product.imageUrl}></img>
+            <img src={product.imageUrl} alt='hi man'></img>
           </a>
           <div className='product-desc'>
             <p>{product.title}</p>
