@@ -1,11 +1,15 @@
 import React from 'react';
 import '../../css/Filter/Filter.css';
+import ProductModal from '../Products/ProductModal';
+import Products from '../Products/Products';
 export default function Filter(props) {
   return (
     <div>
       <div className='filter-wrapper'>
         <h2 className='filter-title'>Filter</h2>
-        <div className='num-of-products'>Number of products 4</div>
+        <div className='num-of-products'>
+          Quantity is {props.productsQuantity}
+        </div>
         <div className='filer-by-size'>
           <span>Size </span>
           <select

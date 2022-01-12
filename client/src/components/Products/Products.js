@@ -10,6 +10,7 @@ function Products(props) {
   const closeModal = () => {
     setproduct(false);
   };
+
   return (
     <div className='products-wrapper'>
       {props.products.map((product) => (
@@ -21,7 +22,9 @@ function Products(props) {
             <p>{product.title}</p>
             <span>{product.price}$</span>
           </div>
-          <button className='button'>Add to Cart</button>
+          <button className='button' onClick={() => props.addToCart(product)}>
+            Add to Cart
+          </button>
         </div>
       ))}
       <ProductModal product={product} closeModal={closeModal} />
