@@ -60,6 +60,7 @@ function Cart(props) {
         )}
       </div>
       <CheckoutForm
+        value={value}
         showForm={showForm}
         setShowForm={setShowForm}
         handleChange={handleChange}
