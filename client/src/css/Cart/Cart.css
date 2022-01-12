@@ -27,6 +27,16 @@
   flex: 1;
 }
 
+.cart-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0px;
+}
+
+.total {
+  font-size: 25px;
+}
+
 button {
   display: inline-block;
   border: 0;
@@ -34,4 +44,5 @@ button {
   color: azure;
   padding: 7px;
   border-radius: 12px;
+  box-shadow: 4px 4px;
 }
