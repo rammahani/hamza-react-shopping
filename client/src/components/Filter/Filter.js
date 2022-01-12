@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../css/Filter/Filter.css';
-export default function Filter() {
+export default function Filter(props) {
   return (
     <div>
       <div className='filter-wrapper'>
@@ -8,7 +8,11 @@ export default function Filter() {
         <div className='num-of-products'>Number of products 4</div>
         <div className='filer-by-size'>
           <span>Size </span>
-          <select className='filter-select'>
+          <select
+            value={props.size}
+            className='filter-select'
+            onChange={props.handleFilterBySize}
+          >
             <option value='ALL'>ALL</option>
             <option value='S'>S</option>
             <option value='M'>M</option>
@@ -18,7 +22,11 @@ export default function Filter() {
         </div>
         <div className='filer-by-order'>
           <span>Order </span>
-          <select className='filter-select'>
+          <select
+            value={props.sort}
+            className='filter-select'
+            onChange={props.handleFilterByOrder}
+          >
             <option value='latest'>Latest</option>
             <option value='lowest'>Lowest</option>
             <option value='heighst'>Heighst </option>
