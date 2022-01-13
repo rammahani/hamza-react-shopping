@@ -3,12 +3,14 @@ lockfileVersion: 5.3
 specifiers:
   body-parser: ^1.19.1
   express: ^4.17.2
+  mongodb: ^4.3.0
   mongoose: ^6.1.5
   nodemon: ^2.0.15
 
 dependencies:
   body-parser: 1.19.1
   express: 4.17.2
+  mongodb: 4.3.0
   mongoose: 6.1.5
   nodemon: 2.0.15
 
@@ -557,6 +559,10 @@ packages:
     engines: {node: '>=10'}
     dev: false
 
+  /ip/1.1.5:
+    resolution: {integrity: sha1-vd7XARQpCCjAoDnnLvJfWq7ENUo=}
+    dev: false
+
   /ipaddr.js/1.9.1:
     resolution: {integrity: sha512-0KI/607xoxSToH7GjN1FfSbLoU0+btTicjsQSWQlh/hZykN8KpmMf7uYwPW3R+akZ6R/w18ZlXSHBYXiYUPO3g==}
     engines: {node: '>= 0.10'}
@@ -740,6 +746,18 @@ packages:
       bson: 4.6.1
       denque: 2.0.1
       mongodb-connection-string-url: 2.4.1
+    optionalDependencies:
+      saslprep: 1.0.3
+    dev: false
+
+  /mongodb/4.3.0:
+    resolution: {integrity: sha512-ovq9ZD9wEvab+LsaQOiwtne1Sy2egaHW8K/H5M18Tv+V5PgTRi+qdmxDGlbm94TSL3h56m6amstptu115Nzgow==}
+    engines: {node: '>=12.9.0'}
+    dependencies:
+      bson: 4.6.1
+      denque: 2.0.1
+      mongodb-connection-string-url: 2.4.1
+      socks: 2.6.1
     optionalDependencies:
       saslprep: 1.0.3
     dev: false
@@ -1054,6 +1072,19 @@ packages:
 
   /sliced/1.0.1:
     resolution: {integrity: sha1-CzpmK10Ewxd7GSa+qCsD+Dei70E=}
+    dev: false
+
+  /smart-buffer/4.2.0:
+    resolution: {integrity: sha512-94hK0Hh8rPqQl2xXc3HsaBoOXKV20MToPkcXvwbISWLEs+64sBq5kFgn2kJDHb1Pry9yrP0dxrCI9RRci7RXKg==}
+    engines: {node: '>= 6.0.0', npm: '>= 3.0.0'}
+    dev: false
+
+  /socks/2.6.1:
+    resolution: {integrity: sha512-kLQ9N5ucj8uIcxrDwjm0Jsqk06xdpBjGNQtpXy4Q8/QY2k+fY7nZH8CARy+hkbG+SGAovmzzuauCpBlb8FrnBA==}
+    engines: {node: '>= 10.13.0', npm: '>= 3.0.0'}
+    dependencies:
+      ip: 1.1.5
+      smart-buffer: 4.2.0
     dev: false
 
   /sparse-bitfield/3.0.3:
