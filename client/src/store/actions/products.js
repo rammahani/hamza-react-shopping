@@ -1,4 +1,4 @@
-import { FETCH_PRODUCTS } from './types';
+import { FETCH_PRODUCTS, FILTER_SORT, FILTER_SIZE } from './types';
 
 export const fetchProducts = () => {
   return (dispatch) => {
@@ -10,5 +10,41 @@ export const fetchProducts = () => {
           data: data,
         });
       });
+  };
+};
+
+export const filterBySize = (products, value) => {
+  return (dispatch) => {
+    let productsClone = [...products];
+    let newProducts = productsClone.filter((p) => p.size.indexOf(value) != -1);
+    dispatch({
+      type: FILTER_SIZE,
+      data: {
+        size: value,
+        products: value == 'ALL' ? products : newProducts,
+      },
+    });
+  };
+};
+
+export const filterBySort = (products, value) => {
+  return (dispatch) => {
+    let productsClone = [...products];
+    let newProdcuts = productsClone.sort(function (a, b) {
+      if (value === 'lowest') {
+        return a.price - b.price;
+      } else if ((value = 'heighest')) {
+        return b.price - a.price;
+      } else {
+        return a.id < b.id ? 1 : -1;
+      }
+    });
+    dispatch({
+      type: FILTER_SORT,
+      data: {
+        sort: value,
+        products: newProdcuts,
+      },
+    });
   };
 };
