@@ -4,6 +4,7 @@ import ProductModal from './ProductModal';
 import Bounce from 'react-reveal/Bounce';
 import { connect } from 'react-redux';
 import { fetchProducts } from '../../store/actions/products';
+import { addToCart } from '../../store/actions/Cart';
 
 function Products(props) {
   const [product, setproduct] = useState('');
@@ -23,7 +24,7 @@ function Products(props) {
       <div className='products-wrapper'>
         {props.products && props.products.length
           ? props.products.map((product) => (
-              <div className='product-item' key={product.id}>
+              <div className='product-item' key={product._id}>
                 <a href='#' onClick={() => openModal(product)}>
                   <img src={product.imageUrl} alt='hi man'></img>
                 </a>
@@ -51,5 +52,5 @@ export default connect(
       products: state.products.filteredProducts,
     };
   },
-  { fetchProducts }
+  { fetchProducts, addToCart }
 )(Products);

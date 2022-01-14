@@ -41,7 +41,7 @@ function App() {
       } else if ((order = 'heighest')) {
         return b.price - a.price;
       } else {
-        return a.id < b.id ? 1 : -1;
+        return a._id < b._id ? 1 : -1;
       }
     });
     setProducts(newProdcuts);
@@ -51,7 +51,7 @@ function App() {
     const cartItemsClone = [...cartItems];
     let isProductExist = false;
     cartItemsClone.forEach((p) => {
-      if (p.id === product.id) {
+      if (p._id === product._id) {
         p.qty++;
         isProductExist = true;
       }
@@ -63,12 +63,12 @@ function App() {
   };
   const removeFromCart = (product) => {
     const cartItemsClone = [...cartItems];
-    setCartItems(cartItemsClone.filter((p) => p.id !== product.id));
+    setCartItems(cartItemsClone.filter((p) => p._id !== product._id));
   };
 
-  useEffect(() => {
-    localStorage.setItem('cartItems', JSON.stringify(cartItems));
-  }, [cartItems]);
+  // useEffect(() => {
+  //   localStorage.setItem('cartItems', JSON.stringify(cartItems));
+  // }, [cartItems]);
   return (
     <Provider store={store}>
       <div className='layout'>
