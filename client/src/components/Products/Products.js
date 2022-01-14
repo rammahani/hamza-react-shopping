@@ -17,6 +17,7 @@ function Products(props) {
   useEffect(() => {
     props.fetchProducts();
   }, []);
+
   return (
     <Bounce left cascade>
       <div className='products-wrapper'>
@@ -47,7 +48,7 @@ function Products(props) {
 export default connect(
   (state) => {
     return {
-      products: state.products.products,
+      products: state.products.filteredProducts,
     };
   },
   { fetchProducts }
