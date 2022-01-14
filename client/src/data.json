@@ -1,6 +1,5 @@
 [
   {
-    "id": "id1",
     "title": "computer",
     "imageUrl": "/images/product1.jpg",
     "desc": "this is product1",
@@ -9,7 +8,6 @@
   },
 
   {
-    "id": "id2",
     "title": "laptop",
     "imageUrl": "/images/product2.png",
     "desc": "this is product2",
@@ -17,7 +15,6 @@
     "sizes": ["S", "M", "L"]
   },
   {
-    "id": "id3",
     "title": "Tablet",
     "imageUrl": "/images/product3.png",
     "desc": "this is product3",
@@ -25,7 +22,6 @@
     "sizes": ["S", "M", "XL"]
   },
   {
-    "id": "id4",
     "title": "mobile",
     "imageUrl": "/images/product4.png",
     "desc": "this is product4",
