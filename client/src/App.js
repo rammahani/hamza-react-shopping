@@ -8,7 +8,7 @@ import data from './data.json';
 import Products from './components/Products/Products';
 import Filter from './components/Filter/Filter';
 import Cart from './components/Cart/Cart';
-import { provider } from 'react-redux';
+import { Provider } from 'react-redux';
 import store from './store/store';
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
   );
   const handleFilterBySize = (e) => {
     setSize(e.target.value);
-    if (e.target.value == 'ALL') {
+    if (e.target.value === 'ALL') {
       setProducts(data);
     } else {
       let ProductsClone = [...products];
@@ -51,7 +51,7 @@ function App() {
     const cartItemsClone = [...cartItems];
     let isProductExist = false;
     cartItemsClone.forEach((p) => {
-      if (p.id == product.id) {
+      if (p.id === product.id) {
         p.qty++;
         isProductExist = true;
       }
@@ -70,14 +70,14 @@ function App() {
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
   }, [cartItems]);
   return (
-    <provider store={store}>
+    <Provider store={store}>
       <div className='layout'>
         <Header />
 
         <main>
           <div className='wrapper'>
             <Products
-              products={products}
+              // products={products}
               className='productswrapper'
               addToCart={addToCart}
             />
@@ -93,7 +93,7 @@ function App() {
         </main>
         <Footer />
       </div>
-    </provider>
+    </Provider>
   );
 }
 
