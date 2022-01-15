@@ -3,16 +3,19 @@ import { connect } from 'react-redux';
 import '../../css/Cart/Cart.css';
 import CheckoutForm from '../CheckoutForm/CheckoutForm';
 import { removeCart } from '../../store/actions/Cart';
-
+import { Modal } from 'react-modal';
 function Cart(props) {
   const [showForm, setShowForm] = useState(false);
+  const [order, setorder] = useState(false);
   const [value, setValue] = useState('');
+
   const submitOrder = (e) => {
     e.preventDefault();
     const order = {
       name: value.name,
       email: value.email,
     };
+    setorder(order);
   };
   const handleChange = (e) => {
     setValue((prevState) => ({
@@ -20,7 +23,9 @@ function Cart(props) {
       [e.target.value]: e.target.value,
     }));
   };
-
+const closeModal=()=>{
+  setorder(false);
+}
   return (
     <>
       <div className='cart-wrapper'>
@@ -31,6 +36,42 @@ function Cart(props) {
             <p>you have {props.cartItems.length} products</p>
           )}
         </div>
+        <Modal isOpen={order} onRequestClose={closeModal}>
+
+          <div className='orderInfo'>
+          <span className='close-icon' onClick={closeModal}>&times;</span>
+            <p className='alert-success'> order done</p>
+            <table>
+              <tr>
+                <tb>name: </tb>
+                <tb>{}order.name</tb>
+              </tr>
+              <tr>
+                <tb>email: </tb>
+                <tb>{}order.email</tb>
+              </tr>
+              <tr>
+                <tb>total: </tb>
+                <tb>
+                  {props.cardItems.reduce((acc, p) => {
+                    return acc + p.price;
+                  }, 0)}
+                </tb>
+              </tr>
+              <td> Selected items: </td>
+              <tr>
+              <td>
+              {props.cardItems.map(p=>{
+                <div className='cart-data'>
+                <p>Number of products: {p.qty} </p>
+                <p>product name: {p.title} </p>
+                </div>
+              })}
+              </td>
+              </tr>
+            </table>
+          </div>
+        </Modal>
         <div className='cart-items'>
           {props.cartItems.map((item) => (
             <div className='cart-item' key={item._id}>
